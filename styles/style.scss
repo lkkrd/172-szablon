@@ -1,0 +1,48 @@
+@import "./mixins";
+
+* {
+  scroll-behavior: smooth;
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace;
+}
+.navbar {
+  position: fixed;
+  @include flexCenter;
+  height: 100vh;
+  right: 0px;
+  ul {
+    border: 1px solid black;
+    @include flexCenter;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    li {
+      @include flexCenter;
+      width: 100%;
+      height: 100%;
+      transition: all 300ms;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  &#plan-lekcji {
+    background-color: rgb(62, 163, 62);
+  }
+  &#nadchodzace-wydarzenia {
+    background-color: lightskyblue;
+  }
+  &#odliczanie {
+    background-color: lightcoral;
+  }
+  &#dysk {
+    background-color: lightyellow;
+  }
+}
